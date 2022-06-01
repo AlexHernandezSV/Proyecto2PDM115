@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/activity_administrador.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/activity_carrilto.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/activity_control_menu.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/activity_main.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/activity_mariscos.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/activity_notas.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/activity_parrillada.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/activity_pedido.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/activity_porciones.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/activity_registro_sms.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/listadofinal.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/listamenu.xml" value="0.17028985507246377" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

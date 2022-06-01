@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.proyecto2pdm115" >
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".principal"
+            android:label="@string/app_name"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".categorias"
+            android:label="@string/title_activity_categorias" >
+        </activity>
+        <activity
+            android:name=".bebidas"
+            android:label="@string/title_activity_bebidas" >
+        </activity>
+        <activity
+            android:name=".porciones"
+            android:label="@string/title_activity_porciones" >
+        </activity>
+        <activity
+            android:name=".parrillada"
+            android:label="@string/title_activity_parrillada" >
+        </activity>
+        <activity
+            android:name=".mariscos"
+            android:label="@string/title_activity_mariscos" >
+        </activity>
+        <activity
+            android:name=".ControlMenu"
+            android:label="@string/title_activity_control_menu" >
+        </activity>
+        <activity
+            android:name=".administrador"
+            android:label="@string/title_activity_administrador" >
+        </activity>
+        <!--<activity
+            android:name=".controlPlatos"
+            android:label="@string/title_activity_control_platos" >
+        </activity>-->
+        <activity
+            android:name=".Carrito"
+            android:label="@string/title_activity_carrilto" >
+        </activity>
+        <activity
+            android:name=".RegistroSms"
+            android:label="@string/title_activity_registro_sms" >
+        </activity>
+        <activity
+            android:name=".Acerca"
+            android:label="@string/title_activity_acerca" >
+        </activity>
+        <activity
+            android:name=".ListadoFinal"
+            android:label="@string/title_activity_listado_final"
+            tools:ignore="Instantiatable">
+        </activity>
+        <activity
+            android:name=".Notas"
+            android:label="@string/title_activity_notas" >
+        </activity>
+        <!--<activity
+            android:name=".ListadoPedido"
+            android:label="@string/title_activity_listado_pedido" >
+        </activity>-->
+        <activity
+            android:name=".Pedido"
+            android:label="@string/title_activity_pedido" >
+        </activity>
+    </application>
+
+</manifest>
