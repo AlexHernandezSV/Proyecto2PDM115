@@ -24,6 +24,7 @@
     <string name="title_activity_notas">Notas</string>
     <string name="title_activity_listado_pedido">Listado de Pedido</string>
     <string name="title_activity_pedido">Pedido</string>
+    <string name="imagen2001">imagen</string>
     <string name="boton2001">tomar foto</string>
 
 </resources>
