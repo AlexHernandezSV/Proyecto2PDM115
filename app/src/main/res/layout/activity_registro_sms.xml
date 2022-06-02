@@ -8,30 +8,30 @@
     android:background="@drawable/fondo2">
 
     <TextView
+        android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username"
-        android:id="@+id/textView9"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="30sp"
-        android:textColor="#ff4e83ff"
+        android:layout_alignEnd="@+id/Usreg"
         android:layout_alignRight="@+id/Usreg"
-        android:layout_alignEnd="@+id/Usreg" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Nombre de usuario"
+        android:textColor="#ff4e83ff"
+        android:textSize="30sp" />
 
     <TextView
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password"
-        android:id="@+id/textView11"
-        android:textSize="30sp"
-        android:textColor="#ff4e83ff"
         android:layout_below="@+id/Usreg"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/Usreg"
         android:layout_alignRight="@+id/Usreg"
-        android:layout_alignEnd="@+id/Usreg" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:text="Contraseña"
+        android:textColor="#ff4e83ff"
+        android:textSize="30sp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -46,17 +46,16 @@
         android:textSize="25sp" />
 
 
-
     <TextView
+        android:id="@+id/txtC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ingrese el Codigo"
-        android:id="@+id/txtC"
-        android:textSize="25sp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="#ff47ca6a" />
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="Ingrese el Código"
+        android:textColor="#ff47ca6a"
+        android:textSize="25sp" />
 
 
     <EditText

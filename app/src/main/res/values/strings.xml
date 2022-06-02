@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Menu CM</string>
+    <string name="app_name">Pedidos médicos</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_categorias">Categorias</string>
     <string name="title_activity_platos">Platos</string>

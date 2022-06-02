@@ -57,23 +57,24 @@
         android:layout_alignParentEnd="true" />
 
     <ImageButton
-        android:layout_width="180dp"
-        android:layout_height="55dp"
         android:id="@+id/login"
-        android:onClick="login"
-        android:background="@drawable/inicio"
-        android:layout_marginTop="47dp"
-        android:layout_below="@+id/password"
-        android:layout_centerHorizontal="true" />
-
-    <ImageButton
         android:layout_width="180dp"
         android:layout_height="60dp"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:background="@drawable/inicio"
+        android:onClick="login" />
+
+    <ImageButton
         android:id="@+id/imageButton20"
-        android:background="@drawable/registro"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
         android:layout_below="@+id/login"
+        android:layout_alignStart="@+id/login"
         android:layout_alignLeft="@+id/login"
-        android:layout_alignStart="@+id/login" />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/registro" />
 
     <ImageButton
         android:layout_width="50dp"
