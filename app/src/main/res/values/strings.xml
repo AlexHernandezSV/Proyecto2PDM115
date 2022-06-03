@@ -26,5 +26,8 @@
     <string name="title_activity_pedido">Pedido</string>
     <string name="imagen2001">imagen</string>
     <string name="boton2001">tomar foto</string>
+    <string name="botonPlay">Play</string>
+    <string name="botonStop">Stop</string>
+    <string name="indicaciones">Indicaciones de voz</string>
 
 </resources>

@@ -48,7 +48,7 @@ public class RegistroSms extends Activity {
     public void enviar(View v){
 //int code=0;
         cont=cont+1;
-        String numero ="(503)70030109" ;
+        String numero ="+5037758" ;
         String codigo;
 
         final Random rand = new Random();
