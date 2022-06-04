@@ -19,32 +19,36 @@ public class parrillada extends Activity {
     String SlectedItem, SlectedPrecio;
     Integer p;
     String[] item_name={
-            "Grill de Carne",
-            "Grill de Pollo",
-            "Tablita CM"
+            "Alcohol",
+            "Curas",
+            "Gazas",
+            "Mascarillas"
 
 
     };
 
     String[] item_desc={
-            "Carne, con papas y ensalada",
-            "Pollo con papas y ensalada",
-            "Carne, Chorizo, Papas, Ensalada"
+            "500 ml",
+            "20 unidades",
+            "50 unidades",
+            "50 unidades"
 
 
     };
 
     String[] item_precio={
-            "$12,32",
-            "$12,10",
-            "$10,45"
+            "$9,99",
+            "$5,25",
+            "$11,99",
+            "10,00"
 
 
     };
     Integer[] img_id={
-            R.drawable.parrcarne,
-            R.drawable.parrpollo,
-            R.drawable.tablitacarne,
+            R.drawable.alcohol,
+            R.drawable.curas,
+            R.drawable.gazas,
+            R.drawable.mascarillas
 
     };
     Boolean[] eleccion={
