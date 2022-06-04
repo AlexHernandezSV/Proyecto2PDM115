@@ -1,6 +1,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -27,6 +30,9 @@
         android:layout_below="@+id/textView21"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="17dp"
         android:text="PBX: +50325604521"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#ff667bff"
@@ -53,21 +59,12 @@
         android:layout_below="@+id/textView20"
         android:layout_alignEnd="@+id/textView17"
         android:layout_alignRight="@+id/textView17"
+        android:layout_marginTop="20dp"
         android:text="grupo12PDM2022@ues.edu.sv"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#ffafafaf"
         android:textSize="20sp"
         android:textStyle="bold" />
-
-    <ImageView
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:id="@+id/imageView"
-        android:background="@drawable/circulo"
-        android:src="@android:drawable/ic_menu_manage"
-        android:layout_above="@+id/textView20"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="22dp" />
 
     <ImageButton
         android:layout_width="50dp"
@@ -78,5 +75,22 @@
         android:layout_alignParentStart="true"
         android:src="@android:drawable/ic_menu_revert"
         android:background="@drawable/circulo" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animacionInicio"
+
+        android:layout_width="236dp"
+        android:layout_height="215dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="388dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/pastilla" />
 
 </RelativeLayout>
