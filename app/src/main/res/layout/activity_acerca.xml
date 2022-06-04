@@ -1,31 +1,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fodoazul"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.proyecto2pdm115.Acerca"
-    android:background="@drawable/fondo">
+    tools:context="com.example.proyecto2pdm115.Acerca">
 
     <com.denzcoskun.imageslider.ImageSlider
         android:id="@+id/image_slider"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         app:auto_cycle="true"
-        app:period="1000"/>
+        app:period="1000" />
 
     <ImageButton
+        android:id="@+id/imageButton12"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/imageButton12"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:src="@android:drawable/ic_menu_revert"
-        android:background="@drawable/circulo" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/circulo"
+        android:backgroundTint="@color/teal_700"
+        android:src="@android:drawable/ic_menu_revert" />
 
     <ImageView
         android:id="@+id/imgLlamada"
@@ -46,6 +47,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="99dp"
         android:layout_marginBottom="92dp"
+        android:backgroundTint="@android:color/holo_green_dark"
         android:text="Contactanos" />
 
 </RelativeLayout>

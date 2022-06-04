@@ -1,25 +1,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fodoazul"
+    android:clickable="false"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.proyecto2pdm115.categorias"
-    android:background="@drawable/fondo"
-    android:clickable="false">
+    tools:context="com.example.proyecto2pdm115.categorias">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Categorias"
-        android:id="@+id/textView"
-        android:textSize="30sp"
-        android:textColor="#ffea7324"
-        android:textStyle="bold"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="Categorias"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffea7324"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <ImageButton
         android:id="@+id/atras"
@@ -27,6 +29,7 @@
         android:layout_height="90dp"
         android:layout_centerInParent="true"
         android:background="@drawable/circulo"
+        android:backgroundTint="@color/teal_700"
         android:src="@android:drawable/ic_menu_revert" />
 
     <ImageButton
@@ -79,7 +82,7 @@
         android:layout_marginBottom="98dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/indicaciones"
-        android:textColor="@color/teal_200"
+        android:textColor="@color/white"
         android:textSize="20sp" />
 
     <Button
@@ -90,6 +93,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="84dp"
         android:layout_marginBottom="43dp"
+        android:backgroundTint="@color/teal_700"
         android:text="@string/botonPlay" />
 
     <Button
@@ -100,6 +104,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="92dp"
         android:layout_marginBottom="44dp"
+        android:backgroundTint="@color/teal_700"
         android:text="@string/botonStop" />
 
 
