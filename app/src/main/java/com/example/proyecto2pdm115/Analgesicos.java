@@ -7,8 +7,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -25,9 +27,18 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Analgesicos extends Activity {
+public class Analgesicos extends AppCompatActivity implements View.OnClickListener {
+
+    //============= Inicio voz =================
+    ListView lv;
+    static final int check=1111;
+    Button Voice;
+    //============= Fin voz =================
+
+
     ListView list;
     Integer p;
     String SlectedItem, SlectedPrecio, valor;
@@ -80,6 +91,12 @@ public class Analgesicos extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analgesicos);
+
+        //============= Inicio voz =================
+        Voice=(Button) findViewById(R.id.bvoice);
+        lv =(ListView) findViewById(R.id.lvVoiceReturn);
+        Voice.setOnClickListener((View.OnClickListener) this);
+        //============= Fin voz =================
 
         TomarFoto = (Button) findViewById(R.id.mainbttomarfoto);
         image = (ImageView) findViewById(R.id.mainimage);
@@ -137,6 +154,19 @@ public class Analgesicos extends Activity {
 
     }
 
+    //============= Inicio voz =================
+    public void onClick(View v) {
+        if (v.getId() == R.id.bvoice) {
+// Si entramos a dar clic en el boton
+            Intent i = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+            i.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+            i.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hable ahora ");
+            startActivityForResult(i, check);
+        }
+    }
+    //============= Fin voz =================
+
     public void onSaveInstanceState(Bundle bundle){
         if (file!=null){
             bundle.putString("Foto", file.toString());
@@ -147,6 +177,7 @@ public class Analgesicos extends Activity {
         @Override
         public void onClick(View v) {
             // TODO Auto-generated method stub
+
             Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             File photo =new File(Environment.getExternalStorageDirectory(),String.valueOf(Calendar.getInstance().getTimeInMillis())+".jpg");
             file=Uri.fromFile(photo);
@@ -165,7 +196,20 @@ public class Analgesicos extends Activity {
                         Toast.LENGTH_SHORT).show();
             }
         }
+        //============= Inicio voz =================
+        if (RequestCode==check && ResultCode==RESULT_OK){
+            ArrayList<String> results =
+                    intent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            lv.setAdapter(new
+                    ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,results));
+        }
+        super.onActivityResult(RequestCode, ResultCode, intent);
+
     }
+    public void onDestroy(){
+        super.onDestroy();
+    }
+        //============= Fin voz =================
 
     public void GuardaItem() {
         AdminSQLiteOpenHelper guarda = new AdminSQLiteOpenHelper(this,"item",null,1);
