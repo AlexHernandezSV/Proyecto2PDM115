@@ -5,13 +5,36 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
 
-public class Acerca extends Activity {
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.models.SlideModel;
+
+import java.util.ArrayList;
+
+
+public class Acerca extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acerca);
+
+        ImageSlider imageSlider;
+
+
+        imageSlider =findViewById(R.id.image_slider);
+
+        ArrayList<SlideModel> imageList = new ArrayList<>();
+
+
+        imageList.add(new SlideModel("https://www.diariofarma.com/wp-content/uploads/2018/12/Farmacia-Ja%C3%A9n_27.08.15-e1544535985370.jpg"));
+        imageList.add(new SlideModel("https://muchosnegociosrentables.com/wp-content/uploads/2021/06/franquicias-de-farmacias-acompanamiento-personal.jpg"));
+        imageList.add(new SlideModel("https://www.definicionabc.com/wp-content/uploads/2009/12/Farmacia.jpg"));
+
+        imageSlider.setImageList(imageList,false);
+
+
         findViewById(R.id.imageButton12).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
