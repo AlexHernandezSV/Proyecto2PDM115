@@ -36,5 +36,19 @@
         android:background="@drawable/circulo"
         android:backgroundTint="@color/teal_700"
         android:src="@android:drawable/ic_menu_revert" />
+    <ImageView
+        android:id="@+id/mainimage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/imagen2001"
+        android:src="@mipmap/ic_launcher" />
+    <Button
+        android:id="@+id/mainbttomarfoto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/boton2001" />
 
 </RelativeLayout>
