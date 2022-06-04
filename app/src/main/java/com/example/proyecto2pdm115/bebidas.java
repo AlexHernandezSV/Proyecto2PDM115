@@ -18,36 +18,36 @@ public class bebidas extends Activity {
     String SlectedItem, SlectedPrecio;
     Integer p;
     String[] item_name={
-            "Coca Cola",
-            "Club",
-            "Sprite",
-            "Limonada",
-            "Jugo de Naranja",
-            "Pilsener"
+            "Acido folico",
+            "Calcio",
+            "SUKROL",
+            "Viagra",
+            "Vitamina C",
+            "Electrolit"
     };
     String[] item_desc={
-            "",
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
+            "100 tabletas",
+            "300 tabletas ",
+            "100 tabletas ",
+            "4 tabletas",
+            "200 capsulas",
+            "Suero oral 1150ml"
     };
     String[] item_precio={
-            "$0.50",
-            "$1.50",
-            "$0.50",
-            "$5.00",
-            "$5.00",
-            "$1.25"
+            "$25.00",
+            "$20.00",
+            "$22.00",
+            "$30.00",
+            "$15.00",
+            "$3.50"
     };
     Integer[] img_id={
-            R.drawable.cocacola,
-            R.drawable.club,
-            R.drawable.sprite,
-            R.drawable.limonada,
-            R.drawable.naranja,
-            R.drawable.pilsener
+            R.drawable.acidofolico,
+            R.drawable.calcio,
+            R.drawable.sukrol,
+            R.drawable.viagra,
+            R.drawable.vitamina,
+            R.drawable.suero
     };
     Boolean[] eleccion={
             false,
