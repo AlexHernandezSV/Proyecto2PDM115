@@ -19,45 +19,45 @@ public class porciones extends Activity {
    Integer p;
    principal pr;
     String[] item_name={
-            "Calamar",
-            "Camaron",
-            "Gratin ",
-            "Tenasas",
-            "Pulpo",
-            "Marinero",
-            "Casa"
+            "Acetaminofen",
+            "Antigripal",
+            "Ibuprofeno",
+            "Paracetamol",
+            "Pepto Bismol",
+            "Tabcin",
+            "Naproxeno"
 
     };
 
     String[] item_desc={
-            "Porcion Calamar Apanado",
-            "Porcion Camaron Apanado",
-            "Porcion de Gratin",
-            "Porcion Tenasas Apanado",
-            "Porcion Pulpo Apanado",
-            "Porcion de Arroz Marinero",
-            "Porcion Extra"
+            "2 blisters de 10 tabletas",
+            "1 blister de 10 tabletas",
+            "5 blisters de 10 tabletas",
+            "2 blisters de 8 tabletas",
+            "Frasco de 473 ml",
+            "60 tabletas efervescentes",
+            "10 tabletas"
     };
 
     String[] item_precio={
-            "$4,25",
-            "$4,25",
+            "$5,00",
+            "$4.75",
+            "$8,75",
             "$5,25",
-            "$5,25",
-            "$7,70",
-            "$4,80",
-            "$5,64"
+            "$15,75",
+            "$10,50",
+            "$6,00"
 
     };
     Integer[] img_id={
 
-            R.drawable.calamar,
-            R.drawable.pcamaron,
-            R.drawable.gratin,
-            R.drawable.tenazas,
-            R.drawable.pulpo,
-            R.drawable.marinero,
-            R.drawable.casa,
+            R.drawable.acetaminofen,
+            R.drawable.antigripal,
+            R.drawable.ibuprofeno,
+            R.drawable.paracetamol,
+            R.drawable.peptobismol,
+            R.drawable.tabcin,
+            R.drawable.naproxeno,
     };
     Boolean[] eleccion={
             false,

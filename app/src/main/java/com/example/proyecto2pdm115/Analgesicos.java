@@ -21,41 +21,41 @@ public class Analgesicos extends Activity {
     EditText captar;
 
     String[] item_name={
-            "Arroz con Camaron",
-            "Camaron de Apanado-Tortilla de Camaron",
-            "Camaron Reventado",
-            "Camaron al Ajillo",
-            "Camaron a la Plancha",
-            "Camaron en Salsa de Mostaza"
+            "Amikacina",
+            "Amoxicilina",
+            "Azitromicina",
+            "Gentamicina",
+            "Neomicina",
+            "Ertapenem"
     };
 
     String[] item_desc={
-            "Arroz,papas fritas o patacones y guarniciones " ,
-            "Papas fritas o arroz y mayonesa",
-            "Reventado en mantequilla,arroz,papas fritas" ,
-            "En salsa de aji y ajo ,papas fritas,arroz",
-            "Arroz,papas salteadas con champinones  o papas fritas y guarniciones",
-            "Camaron en cascara con mostaza ,patacones, y mayonesa"
+            "1 vial de 2ml" ,
+            "Caja con 12 capsulas",
+            "Caja con 3 tabletas" ,
+            "1 vial de 2ml",
+            "Caja con 12 tabletas",
+            "1 vial de 1g"
 
     };
 
     String[] item_precio={
-            "$3,50",
-            "$6,50",
-            "$9.00",
-            "$1.00",
-            "$1.50",
-            "$8.50"
+            "$20,00",
+            "$15,75",
+            "$18.99",
+            "$25.00",
+            "$18.75",
+            "$30.00"
 
 
     };
     Integer[] img_id={
-            R.drawable.arrozcamaron,
-            R.drawable.tortilla,
-            R.drawable.reventado,
-            R.drawable.ajilll,
-            R.drawable.plancha,
-            R.drawable.salsa,
+            R.drawable.amikacina,
+            R.drawable.amoxicilina,
+            R.drawable.azitromicina,
+            R.drawable.gentamicina,
+            R.drawable.neomicina,
+            R.drawable.ertapenem,
 
     };
     @Override
