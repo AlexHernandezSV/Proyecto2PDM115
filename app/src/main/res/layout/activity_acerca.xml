@@ -27,4 +27,25 @@
         android:src="@android:drawable/ic_menu_revert"
         android:background="@drawable/circulo" />
 
+    <ImageView
+        android:id="@+id/imgLlamada"
+        android:layout_width="56dp"
+        android:layout_height="61dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="243dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/circulo"
+        android:src="@drawable/llamada" />
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="92dp"
+        android:text="Contactanos" />
+
 </RelativeLayout>
