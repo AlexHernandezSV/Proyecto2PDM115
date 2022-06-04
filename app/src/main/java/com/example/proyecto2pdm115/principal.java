@@ -6,16 +6,31 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 
 
 public class principal extends Activity {
     String captar;
     EditText verga;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.principal);
+
+        //agregar imagen a la prestania principal
+        imageView=findViewById(R.id.imagen1702);
+        String url="https://www.contigoentufarmacia.com/arxius/imatgesbutlleti/farmaceutico_asesor_salud_500x500.gif";
+        Glide.with(this)
+                .load(url)
+                .placeholder(R.drawable.ic_launcher_background)
+                .error(R.drawable.ic_launcher_background)
+                .into(imageView);
+
+
         ImageButton lapiz=(ImageButton)findViewById(R.id.notas);
         lapiz.setVisibility(View.INVISIBLE);
         if(Global.log.equals("1")){

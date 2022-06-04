@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:background="@drawable/fondo">
 
+    <ImageView
+        android:id="@+id/imagen1702"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="80dp"
