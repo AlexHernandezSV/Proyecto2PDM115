@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.media.MediaPlayer;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import java.io.IOException;
 
@@ -66,7 +65,7 @@ public class categorias extends Activity {
         findViewById(R.id.cangrejo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                categorias.this.startActivity(new Intent(categorias.this, mariscos.class));
+                categorias.this.startActivity(new Intent(categorias.this, Analgesicos.class));
             }
         });
     }

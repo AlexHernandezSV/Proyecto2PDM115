@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import java.util.Random;
 
 
@@ -78,9 +79,9 @@ public class RegistroSms extends Activity {
         String ides = pass.getText().toString();
         String codigo = cod.getText().toString();
         code2 = Integer.parseInt(codigo);
-       // code2= Integer.toString(code);
+        //code2= Integer.toString(code);
 
-     //    if (code2.equals(code)) {
+         if (code2.equals(code)) {
 
         //es una clase para guardar datos
         ContentValues grabar_oficina =new ContentValues();
@@ -92,12 +93,13 @@ public class RegistroSms extends Activity {
         Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show();
             Intent i =new Intent(RegistroSms.this, administrador.class);
             startActivity(i);
-    //    }
-     //   else {
+        }
+        else {
 
-     //       Toast.makeText(this, "Error! El codigo ingresado NO es valido:", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error! El codigo ingresado NO es valido:", Toast.LENGTH_SHORT).show();
+            //FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
 
-       //     }
+            }
 
 
     }
