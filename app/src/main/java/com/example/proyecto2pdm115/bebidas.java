@@ -39,7 +39,8 @@ public class bebidas extends Activity {
             "$22.00",
             "$30.00",
             "$15.00",
-            "$3.50"
+            "$2.50"
+
     };
     Integer[] img_id={
             R.drawable.acidofolico,

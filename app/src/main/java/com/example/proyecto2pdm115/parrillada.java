@@ -22,7 +22,8 @@ public class parrillada extends Activity {
             "Alcohol",
             "Curas",
             "Gazas",
-            "Mascarillas"
+            "Mascarillas",
+            "Condones"
 
 
     };
@@ -31,7 +32,8 @@ public class parrillada extends Activity {
             "500 ml",
             "20 unidades",
             "50 unidades",
-            "50 unidades"
+            "50 unidades",
+            "3 unidades"
 
 
     };
@@ -40,7 +42,8 @@ public class parrillada extends Activity {
             "$9,99",
             "$5,25",
             "$11,99",
-            "10,00"
+            "10,00",
+            "3.50"
 
 
     };
@@ -48,7 +51,8 @@ public class parrillada extends Activity {
             R.drawable.alcohol,
             R.drawable.curas,
             R.drawable.gazas,
-            R.drawable.mascarillas
+            R.drawable.mascarillas,
+            R.drawable.condones
 
     };
     Boolean[] eleccion={
