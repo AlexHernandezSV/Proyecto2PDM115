@@ -5,19 +5,18 @@
     android:layout_width="match_parent"
     android:background="@drawable/fondo">
 
-
     <ImageView
         android:id="@+id/imagen1702"
-        android:layout_width="367dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/home"
+        android:layout_width="193dp"
+        android:layout_height="178dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="453dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="84dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="463dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="105dp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -56,14 +55,14 @@
         android:src="@drawable/avatar" />
 
     <ImageButton
-        android:id="@+id/Mesa2"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_below="@+id/textView5"
-        android:layout_alignEnd="@+id/textView5"
-        android:layout_alignRight="@+id/textView5"
+        android:id="@+id/Mesa2"
         android:background="@drawable/mesa"
-        android:src="@drawable/avatar" />
+        android:src="@drawable/avatar"
+        android:layout_below="@+id/textView5"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5" />
 
     <ImageButton
         android:id="@+id/Mesa1"
@@ -86,14 +85,14 @@
         android:layout_alignEnd="@+id/home" />
 
     <ImageButton
-        android:id="@+id/Mesa4"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
+        android:id="@+id/Mesa4"
         android:background="@drawable/mesa"
-        android:src="@drawable/avatar" />
+        android:src="@drawable/avatar"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:id="@+id/help"
@@ -106,13 +105,13 @@
         android:src="@drawable/acerca" />
 
     <ImageButton
-        android:id="@+id/notas"
         android:layout_width="65dp"
         android:layout_height="60dp"
+        android:id="@+id/notas"
+        android:background="@drawable/notas"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:background="@drawable/notas" />
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/textView29"

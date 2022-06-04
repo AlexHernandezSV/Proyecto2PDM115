@@ -14,7 +14,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
-public class mariscos extends Activity {
+public class Analgesicos extends Activity {
     ListView list;
     Integer p;
     String SlectedItem, SlectedPrecio, valor;
@@ -61,7 +61,7 @@ public class mariscos extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mariscos);
+        setContentView(R.layout.activity_analgesicos);
 
 
         list = (ListView) findViewById(R.id.listaVista);
@@ -74,7 +74,7 @@ public class mariscos extends Activity {
                 p=position;
                // valor=captar.getText().toString();
 
-               new AlertDialog.Builder(mariscos.this)
+               new AlertDialog.Builder(Analgesicos.this)
                        .setTitle("Confirmacion de Agregacion")
                        .setMessage("Deseas agregar ese plato?")
                        .setPositiveButton("Si",new DialogInterface.OnClickListener() {
@@ -84,7 +84,7 @@ public class mariscos extends Activity {
                        SlectedItem = item_name[p];
                        SlectedPrecio = item_precio[p];
 
-                       Intent i = new Intent(mariscos.this, Carrito.class);
+                       Intent i = new Intent(Analgesicos.this, Carrito.class);
                        i.putExtra("itemn", item_name[p].toString());
                        i.putExtra("itemd", item_desc[p].toString());
                        i.putExtra("itemp", item_precio[p].toString());
@@ -103,7 +103,7 @@ public class mariscos extends Activity {
         findViewById(R.id.imageButton3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mariscos.this.startActivity(new Intent(mariscos.this, categorias.class));
+                Analgesicos.this.startActivity(new Intent(Analgesicos.this, categorias.class));
             }
         });
 

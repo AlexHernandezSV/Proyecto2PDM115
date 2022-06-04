@@ -45,7 +45,7 @@
             android:name=".parrillada"
             android:label="@string/title_activity_parrillada"></activity>
         <activity
-            android:name=".mariscos"
+            android:name=".Analgesicos"
             android:label="@string/title_activity_mariscos"></activity>
         <activity
             android:name=".ControlMenu"
