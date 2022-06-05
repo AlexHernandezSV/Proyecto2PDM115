@@ -198,10 +198,26 @@ public class Analgesicos extends AppCompatActivity implements View.OnClickListen
         }
         //============= Inicio voz =================
         if (RequestCode==check && ResultCode==RESULT_OK){
-            ArrayList<String> results =
-                    intent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-            lv.setAdapter(new
-                    ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,results));
+            ArrayList<String> results = intent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
+                if(results.indexOf("amikacina") == 0 || results.indexOf("amoxicilina" ) == 0 || results.indexOf("azitromicina") == 0 || results.indexOf("gentamicina") == 0 || results.indexOf("Neomicina") == 0 || results.indexOf("ertapenem") == 0)
+                {
+                    Toast toast1 =
+                            Toast.makeText(getApplicationContext(),
+                                    "Medicamento en existencia", Toast.LENGTH_SHORT);
+
+                    toast1.show();
+                }
+                else
+                {
+                    Toast toast2 =
+                            Toast.makeText(getApplicationContext(),
+                                    "Medicamento no encontrado, inténtalo nuevamente", Toast.LENGTH_SHORT);
+
+                    toast2.show();
+                }
+
+            lv.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,results));
         }
         super.onActivityResult(RequestCode, ResultCode, intent);
 
