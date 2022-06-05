@@ -3,10 +3,13 @@ package com.example.proyecto2pdm115;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -45,6 +48,7 @@ public class Carrito extends Activity {
     String v = "1";
 
 
+
     private Socket socket;
     private static final int SERVERPORT = 6000;
     private static final String SERVER_IP = "192.168.0.101";
@@ -63,6 +67,9 @@ public class Carrito extends Activity {
         final int year = calendar.get(Calendar.YEAR);
         final int month = calendar.get(Calendar.MONTH);
         final int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+
+        
 
         tvSelectDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,7 +151,19 @@ public class Carrito extends Activity {
             }
         });
     }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//    //metodo para notificacion
+//    private void createNotificationChannel(){
+//        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+//            int importance=NotificationManager.IMPORTANCE_HIGH;
+//
+//
+//            //val channel=NotificationChannel()
+//        }
+//    }
+
+
+
 
     public void Listar() {
         AdminSQLiteOpenHelper lista = new AdminSQLiteOpenHelper(this, "item", null, 1);
