@@ -20,11 +20,12 @@
 
     <ListView
         android:id="@+id/parrilla"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="393dp"
+        android:layout_height="450dp"
         android:layout_below="@+id/imageButton"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="2dp" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -36,5 +37,30 @@
         android:background="@drawable/circulo"
         android:backgroundTint="@color/teal_700"
         android:src="@android:drawable/ic_menu_revert" />
+
+    <!-- Funcionalidad de pedidos por voz -->
+    <Button
+        android:id="@+id/bvoice"
+        android:layout_width="334dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginEnd="45dp"
+        android:text="@string/btnTalk" />
+
+    <ListView
+        android:id="@+id/lvVoiceReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="570dp"
+        android:layout_marginEnd="32dp">
+    </ListView>
 
 </RelativeLayout>
