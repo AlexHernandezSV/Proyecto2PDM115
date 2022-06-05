@@ -7,18 +7,32 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 
-public class bebidas extends Activity {
+import java.util.ArrayList;
+
+
+public class bebidas extends AppCompatActivity implements View.OnClickListener {
+
+    //============= Inicio voz =================
+    ListView lv;
+    static final int check=1111;
+    Button Voice;
+    //============= Fin voz =================
+
     ListView list;
     String SlectedItem, SlectedPrecio;
     Integer p;
     String[] item_name={
-            "Acido folico",
+            "Ácido fólico",
             "Calcio",
             "SUKROL",
             "Viagra",
@@ -66,6 +80,12 @@ public class bebidas extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bebidas);
 
+        //============= Inicio voz =================
+        Voice=(Button) findViewById(R.id.bvoice);
+        lv =(ListView) findViewById(R.id.lvVoiceReturn);
+        Voice.setOnClickListener((View.OnClickListener) this);
+        //============= Fin voz =================
+
         list = (ListView) findViewById(R.id.listaBebida);
         CustomListAdapter adaptador = new CustomListAdapter(this, item_name, item_desc, item_precio, img_id);
         list.setAdapter(adaptador);
@@ -104,6 +124,54 @@ public class bebidas extends Activity {
         });
 
     }
+
+    //============= Inicio voz =================
+    public void onClick(View v) {
+        if (v.getId() == R.id.bvoice) {
+// Si entramos a dar clic en el boton
+            Intent i = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+            i.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+            i.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hable ahora ");
+            startActivityForResult(i, check);
+        }
+    }
+    //============= Fin voz =================
+
+    @Override
+    public void onActivityResult(int RequestCode, int ResultCode, Intent intent) {
+
+        //============= Inicio voz =================
+        if (RequestCode==check && ResultCode==RESULT_OK){
+            ArrayList<String> results = intent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
+            if(results.indexOf("ácido fólico") == 0 || results.indexOf("calcio" ) == 0 || results.indexOf("sukrol") == 0 || results.indexOf("viagra") == 0 || results.indexOf("vitamina c") == 0 || results.indexOf("electrolit") == 0)
+            {
+                Toast toast1 =
+                        Toast.makeText(getApplicationContext(),
+                                "Medicamento en existencia", Toast.LENGTH_SHORT);
+
+                toast1.show();
+            }
+            else
+            {
+                Toast toast2 =
+                        Toast.makeText(getApplicationContext(),
+                                "Medicamento no encontrado, inténtalo nuevamente", Toast.LENGTH_SHORT);
+
+                toast2.show();
+            }
+
+            lv.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,results));
+        }
+        super.onActivityResult(RequestCode, ResultCode, intent);
+
+    }
+    public void onDestroy(){
+        super.onDestroy();
+    }
+    //============= Fin voz =================
+
     public void GuardaItem() {
         AdminSQLiteOpenHelper guarda = new AdminSQLiteOpenHelper(this,"item",null,1);
         SQLiteDatabase base =guarda.getWritableDatabase();
