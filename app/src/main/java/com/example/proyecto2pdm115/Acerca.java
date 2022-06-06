@@ -46,14 +46,14 @@ public class Acerca extends AppCompatActivity {
         map.setMultiTouchControls(true);
 
         IMapController mapController = map.getController();
-        mapController.setZoom(17);
+        mapController.setZoom(15);
         GeoPoint startPoint = new GeoPoint(13.721223111930575, -89.20026799383206);
         mapController.setCenter(startPoint);
         mapController.animateTo(startPoint);
 
         Marker startMarker = new Marker(map);
         startMarker.setPosition(startPoint);
-        startMarker.setTitle("EISI UES");
+        startMarker.setTitle("Farmacia EISI UES");
 
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
         map.getOverlays().add(startMarker);
