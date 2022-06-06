@@ -5,6 +5,8 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -20,6 +22,10 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -47,6 +53,9 @@ public class Carrito extends Activity {
     int cc;
     String v = "1";
 
+    private ImageButton aaaa;
+    private static final String CHANNEL_ID="canal";
+    private PendingIntent pendingIntent;
 
 
     private Socket socket;
@@ -69,7 +78,20 @@ public class Carrito extends Activity {
         final int day = calendar.get(Calendar.DAY_OF_MONTH);
 
 
-        
+        //============================== Inicio Notificacion ================================
+
+        aaaa=findViewById(R.id.aaaa);
+        aaaa.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+                    showNotification();
+                }else{
+                    showNewNotification();
+                }
+            }
+
+        });
 
         tvSelectDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,16 +174,36 @@ public class Carrito extends Activity {
         });
     }
 
-//    //metodo para notificacion
-//    private void createNotificationChannel(){
-//        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
-//            int importance=NotificationManager.IMPORTANCE_HIGH;
-//
-//
-//            //val channel=NotificationChannel()
-//        }
-//    }
+//    metodo para notificacion
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void showNotification(){
+        NotificationChannel channel= new NotificationChannel(CHANNEL_ID,"NEW",NotificationManager.IMPORTANCE_DEFAULT);
+        NotificationManager manager=(NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        manager.createNotificationChannel(channel);
+        showNewNotification();
+    }
+
+    private void showNewNotification(){
+        setPendingIntent(notificacionActivity.class);
+        NotificationCompat.Builder builder= new NotificationCompat.Builder(getApplicationContext(),
+                CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_message)
+                .setContentTitle("Notificacion de Producto")
+                .setContentText("Se ha agregado un producto")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setContentIntent(pendingIntent);
+        NotificationManagerCompat managerCompat=NotificationManagerCompat.from(getApplicationContext());
+        managerCompat.notify(1,builder.build());
+    }
+
+    private void setPendingIntent(Class<?> clsActivity){
+        Intent intent= new Intent(this,clsActivity);
+        TaskStackBuilder stackBuilder= TaskStackBuilder.create(this);
+        stackBuilder.addParentStack(clsActivity);
+        stackBuilder.addNextIntent(intent);
+        pendingIntent=stackBuilder.getPendingIntent(1,PendingIntent.FLAG_UPDATE_CURRENT);
+    }
 
 
 
