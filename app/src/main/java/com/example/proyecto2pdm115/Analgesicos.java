@@ -173,7 +173,7 @@ public class Analgesicos extends AppCompatActivity implements View.OnClickListen
     //============= Fin voz =================
 
 
-    //inicio de camara pero no se usará 
+    //inicio de camara pero no se usará
     public void onSaveInstanceState(Bundle bundle){
         if (file!=null){
             bundle.putString("Foto", file.toString());
