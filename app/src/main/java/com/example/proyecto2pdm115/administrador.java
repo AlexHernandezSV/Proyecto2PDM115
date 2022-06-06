@@ -10,10 +10,25 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class administrador extends Activity {
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
+
+
+public class administrador extends AppCompatActivity {
     EditText user, pass;
     ImageButton lapiz;
+
+    GoogleSignInOptions gso;
+    GoogleSignInClient gsc;
+    ImageButton googleBtn;
+
 
 
 
@@ -22,9 +37,20 @@ public class administrador extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_administrador);
 
+        googleBtn = findViewById(R.id.singIn);
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        gsc = GoogleSignIn.getClient(this,gso);
+
         user = (EditText) findViewById(R.id.username);
         pass = (EditText) findViewById(R.id.password);
         lapiz=(ImageButton)findViewById(R.id.notas);
+
+        googleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                singIn();
+            }
+        });
 
 
 
@@ -38,6 +64,32 @@ public class administrador extends Activity {
             public void onClick(View v) {
                 administrador.this.startActivity(new Intent(administrador.this, RegistroSms.class));      }
         });
+    }
+
+
+    void singIn(){
+        Intent signInIntent = gsc.getSignInIntent();
+        startActivityForResult(signInIntent, 1000);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1000){
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            try {
+                task.getResult(ApiException.class);
+                navigateToSecondActivity();
+            } catch (ApiException e) {
+                Toast.makeText(getApplicationContext(),"No se pudo acceder a la cuenta",Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    void navigateToSecondActivity(){
+        finish();
+        Intent intent = new Intent(administrador.this,principal.class);
+        startActivity(intent);
     }
 
     public void login(View v) {

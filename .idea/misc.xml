@@ -5,7 +5,6 @@
       <map>
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_acerca.xml" value="0.35778985507246375" />
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_administrador.xml" value="0.35778985507246375" />
-        <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_analgesicos.xml" value="0.358695652173913" />
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_bebidas.xml" value="0.35778985507246375" />
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_camara.xml" value="0.14537037037037037" />
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_carrilto.xml" value="0.35778985507246375" />
@@ -14,7 +13,6 @@
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_main.xml" value="0.35778985507246375" />
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_mariscos.xml" value="0.35778985507246375" />
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_notas.xml" value="0.35778985507246375" />
-        <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_notificacion.xml" value="0.36666666666666664" />
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_parrillada.xml" value="0.35778985507246375" />
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_pedido.xml" value="0.35778985507246375" />
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/activity_porciones.xml" value="0.35778985507246375" />
@@ -22,11 +20,10 @@
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/listadofinal.xml" value="0.35778985507246375" />
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/listamenu.xml" value="0.35778985507246375" />
         <entry key="..\:/Ciclo 01-2022/PDM/Proyecto2PDM115/app/src/main/res/layout/principal.xml" value="0.35778985507246375" />
-        <entry key="..\:/Projectos Android/Android/Proyecto2PDM115/app/src/main/res/layout/activity_acerca.xml" value="0.25" />
+        <entry key="..\:/Projectos Android/Android/Proyecto2PDM115/app/src/main/res/layout/activity_acerca.xml" value="0.20416666666666666" />
         <entry key="..\:/Projectos Android/Android/Proyecto2PDM115/app/src/main/res/layout/activity_administrador.xml" value="0.20416666666666666" />
         <entry key="..\:/Projectos Android/Android/Proyecto2PDM115/app/src/main/res/layout/activity_control_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Projectos Android/Android/Proyecto2PDM115/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Projectos Android/Android/Proyecto2PDM115/app/src/main/res/layout/activity_notas.xml" value="0.15806159420289856" />
         <entry key="..\:/Projectos Android/Android/Proyecto2PDM115/app/src/main/res/layout/activity_registro_sms.xml" value="0.20416666666666666" />
         <entry key="..\:/Projectos Android/Android/Proyecto2PDM115/app/src/main/res/layout/principal.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Pofi/AndroidStudioProjects/Proyecto2PDM115/app/src/main/res/layout/activity_administrador.xml" value="0.17028985507246377" />
@@ -46,8 +43,8 @@
         <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/drawable/ovalo.xml" value="0.1" />
         <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_acerca.xml" value="0.17028985507246377" />
         <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_administrador.xml" value="0.17028985507246377" />
-        <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_analgesicos.xml" value="0.22" />
-        <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_bebidas.xml" value="0.22" />
+        <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_analgesicos.xml" value="0.33" />
+        <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_bebidas.xml" value="0.2" />
         <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_camara.xml" value="0.17028985507246377" />
         <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_carrilto.xml" value="0.33" />
         <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_categorias.xml" value="0.22" />
@@ -55,7 +52,7 @@
         <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_main.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_mariscos.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_notas.xml" value="0.19635416666666666" />
-        <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_parrillada.xml" value="0.25" />
+        <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_parrillada.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_pedido.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_porciones.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/Pofi/Documents/GitHub/Proyecto2PDM115/app/src/main/res/layout/activity_registro_sms.xml" value="0.33" />
@@ -90,6 +87,16 @@
         <entry key="..\:/Users/USUARIO/Desktop/UES/CICLO I 2022/PDM115/Proyecto2PDM115/app/src/main/res/menu/menu_categorias.xml" value="0.26875" />
         <entry key="..\:/Users/USUARIO/Desktop/UES/CICLO I 2022/PDM115/Proyecto2PDM115/app/src/main/res/menu/menu_maricos.xml" value="0.26875" />
         <entry key="..\:/Users/USUARIO/Desktop/UES/CICLO I 2022/PDM115/Proyecto2PDM115/app/src/main/res/menu/menu_parrillada.xml" value="0.26875" />
+        <entry key="..\:/Users/user/Documents/UNIVERSIDAD/PDM/PROYT-2/Proyecto2PDM115/app/src/main/res/layout/activity_administrador.xml" value="0.5" />
+        <entry key="..\:/Users/user/Documents/UNIVERSIDAD/PDM/PROYT-2/Proyecto2PDM115/app/src/main/res/layout/activity_carrilto.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/user/Documents/UNIVERSIDAD/PDM/PROYT-2/Proyecto2PDM115/app/src/main/res/layout/activity_control_menu.xml" value="0.25" />
+        <entry key="..\:/Users/user/Documents/UNIVERSIDAD/PDM/PROYT-2/Proyecto2PDM115/app/src/main/res/layout/activity_notas.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/user/Documents/UNIVERSIDAD/PDM/PROYT-2/Proyecto2PDM115/app/src/main/res/layout/activity_pedido.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/user/Documents/UNIVERSIDAD/PDM/PROYT-2/Proyecto2PDM115/app/src/main/res/layout/activity_porciones.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/user/Documents/UNIVERSIDAD/PDM/PROYT-2/Proyecto2PDM115/app/src/main/res/layout/activity_registro_sms.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/user/Documents/UNIVERSIDAD/PDM/PROYT-2/Proyecto2PDM115/app/src/main/res/layout/listadofinal.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/user/Documents/UNIVERSIDAD/PDM/PROYT-2/Proyecto2PDM115/app/src/main/res/layout/listamenu.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/user/Documents/UNIVERSIDAD/PDM/PROYT-2/Proyecto2PDM115/app/src/main/res/layout/principal.xml" value="0.33" />
       </map>
     </option>
   </component>

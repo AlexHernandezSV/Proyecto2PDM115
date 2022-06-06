@@ -80,6 +80,14 @@
         android:background="@drawable/registro" />
 
     <ImageButton
+        android:id="@+id/singIn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/imageButton20"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/google"/>
+
+    <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -99,10 +107,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="394dp"
-        android:layout_marginEnd="97dp"
-        android:layout_marginBottom="129dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="437dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="118dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/doctorinicio" />
