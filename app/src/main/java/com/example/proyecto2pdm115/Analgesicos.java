@@ -49,6 +49,7 @@ public class Analgesicos extends AppCompatActivity implements View.OnClickListen
     final int FOTOGRAFIA = 654;
     Uri file;
 
+
     String[] item_name={
             "Amikacina",
             "Amoxicilina",
