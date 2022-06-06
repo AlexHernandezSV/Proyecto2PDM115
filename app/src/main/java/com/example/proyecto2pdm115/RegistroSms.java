@@ -20,7 +20,7 @@ public class RegistroSms extends Activity {
     Integer code=0;
     Integer code2=0;
     Integer code3=0;
-    EditText user, pass,num, cod;
+    EditText user, pass,num, cod, mail;
     TextView txtc;
     int cont=0;
 
@@ -37,7 +37,7 @@ public class RegistroSms extends Activity {
         cod = (EditText) findViewById(R.id.codigo);
         txtc = (TextView) findViewById(R.id.txtC);
         btni = (ImageButton) findViewById(R.id.save);
-
+        mail = (EditText) findViewById(R.id.editMail);
 
         cod.setVisibility(View.INVISIBLE);
         txtc.setVisibility(View.INVISIBLE);
@@ -57,6 +57,7 @@ public class RegistroSms extends Activity {
 
             codigo=("El codigo es: "+code);
 
+            enviar(codigo);
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(numero, null, codigo, null, null);
 
@@ -104,6 +105,17 @@ public class RegistroSms extends Activity {
 
     }
 
+    //metodo para enviar el correo electronico
+    private void enviar (String codigo)
+    {
+        String correo = mail.getText().toString().trim();
+        String tema = "Codigo de confirmacion";
+        String cuerpo = codigo;
+
+        JavaMailAPI mail = new JavaMailAPI(this ,correo,tema,cuerpo);
+
+        mail.execute();
+    }
 
 
 
