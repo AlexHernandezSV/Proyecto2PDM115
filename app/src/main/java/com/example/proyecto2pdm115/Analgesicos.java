@@ -44,6 +44,8 @@ public class Analgesicos extends AppCompatActivity implements View.OnClickListen
     String SlectedItem, SlectedPrecio, valor;
     EditText captar;
 
+
+    //camara
     Button TomarFoto;
     ImageView image;
     final int FOTOGRAFIA = 654;
@@ -99,6 +101,8 @@ public class Analgesicos extends AppCompatActivity implements View.OnClickListen
         Voice.setOnClickListener((View.OnClickListener) this);
         //============= Fin voz =================
 
+
+        //inicio de camara pero no se usará esta
         TomarFoto = (Button) findViewById(R.id.mainbttomarfoto);
         image = (ImageView) findViewById(R.id.mainimage);
         TomarFoto.setOnClickListener(onClick);
@@ -168,6 +172,8 @@ public class Analgesicos extends AppCompatActivity implements View.OnClickListen
     }
     //============= Fin voz =================
 
+
+    //inicio de camara pero no se usará 
     public void onSaveInstanceState(Bundle bundle){
         if (file!=null){
             bundle.putString("Foto", file.toString());
@@ -197,6 +203,7 @@ public class Analgesicos extends AppCompatActivity implements View.OnClickListen
                         Toast.LENGTH_SHORT).show();
             }
         }
+
         //============= Inicio voz =================
         if (RequestCode==check && ResultCode==RESULT_OK){
             ArrayList<String> results = intent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
