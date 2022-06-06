@@ -107,5 +107,19 @@
         android:backgroundTint="@color/teal_700"
         android:text="@string/botonStop" />
 
+    <Button
+        android:id="@+id/btnReceta"
+        android:layout_width="120dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="262dp"
+        android:layout_marginBottom="572dp"
+        android:text="Receta" />
+
 
 </RelativeLayout>

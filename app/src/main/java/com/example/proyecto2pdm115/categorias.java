@@ -17,6 +17,9 @@ public class categorias extends Activity {
     Button Play;
     Button Stop;
 
+    //camara
+    Button abrirCamara;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,15 @@ public class categorias extends Activity {
         cabron=b.getString("elcoso");*/
 
 
+        //codigo para abrir camara
+        abrirCamara=(Button)findViewById(R.id.btnReceta);
+        abrirCamara.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(categorias.this,CamaraActivity.class);
+                startActivity(intent);
+            }
+        });
 
         findViewById(R.id.porciones).setOnClickListener(new View.OnClickListener() {
             @Override
