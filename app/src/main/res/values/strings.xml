@@ -30,5 +30,5 @@
     <string name="botonStop">Stop</string>
     <string name="indicaciones">Indicaciones de voz</string>
     <string name="btnTalk">Verificar existencia por voz</string>
-
+    <string name="ubi">Ubicanos</string>
 </resources>
