@@ -126,7 +126,7 @@ public class Analgesicos extends AppCompatActivity implements View.OnClickListen
 
                new AlertDialog.Builder(Analgesicos.this)
                        .setTitle("Confirmacion de Agregacion")
-                       .setMessage("Deseas agregar ese plato?")
+                       .setMessage("Deseas agregar ese Medicamento?")
                        .setPositiveButton("Si",new DialogInterface.OnClickListener() {
                    @Override
                    public void onClick(DialogInterface dialog, int which) {

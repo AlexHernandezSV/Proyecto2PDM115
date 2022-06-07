@@ -100,7 +100,7 @@ public class parrillada extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 p=position;
-                new AlertDialog.Builder(parrillada.this).setTitle("Confirmacion de Agregacion").setMessage("Deseas agregar ese plato?").setPositiveButton("Si",new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(parrillada.this).setTitle("Confirmacion de Agregacion").setMessage("Deseas agregar ese Medicamento?").setPositiveButton("Si",new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                 //        Toast.makeText(parrillada.this,"si",Toast.LENGTH_LONG).show();

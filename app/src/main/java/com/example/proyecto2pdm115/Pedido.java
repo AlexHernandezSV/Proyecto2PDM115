@@ -40,7 +40,7 @@ public class Pedido extends Activity {
             public void onClick(View v) {
                 new AlertDialog.Builder(Pedido.this)
                         .setTitle("Confirmacion de Eliminacion")
-                        .setMessage("Estas seguro de eliminar\n todos los platos?")
+                        .setMessage("Estas seguro de eliminar\n todos los Medicamentos?")
                         .setPositiveButton("Si Completamente ", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -97,8 +97,8 @@ public class Pedido extends Activity {
             int cant = base.delete("item" ,"pedido="+dato, null); // (oficina es la nombre de la tabla, condición)
             base.close();
             if (cant == 1)
-                Toast.makeText(this, "Acaba de borrar todos los platos...",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Acaba de borrar todos los Medicamentos...",Toast.LENGTH_SHORT).show();
             else
-                Toast.makeText(this, "No existen platos!\nAgrege Nuevamente Platos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "No existen medicamentos!\nAgrege Nuevamente Medicamentos", Toast.LENGTH_SHORT).show();
         }
     }

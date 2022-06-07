@@ -150,7 +150,7 @@ public class Carrito extends Activity {
             public void onClick(View v) {
                 new AlertDialog.Builder(Carrito.this)
                         .setTitle("Confirmacion de Eliminacion")
-                        .setMessage("Estas seguro de eliminar\n todos los platos?")
+                        .setMessage("Estas seguro de eliminar\n todos los Medicamentos?")
                         .setPositiveButton("Si Completamente ", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -189,8 +189,8 @@ public class Carrito extends Activity {
         NotificationCompat.Builder builder= new NotificationCompat.Builder(getApplicationContext(),
                 CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_message)
-                .setContentTitle("Notificacion de Producto")
-                .setContentText("Se ha agregado un producto")
+                .setContentTitle("Notificacion de Medicamento")
+                .setContentText("Se ha agregado un Medicamento")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setContentIntent(pendingIntent);
         NotificationManagerCompat managerCompat=NotificationManagerCompat.from(getApplicationContext());
@@ -243,9 +243,9 @@ public class Carrito extends Activity {
         int cant = base.delete("item", "pedido=" + Global.ivar1, null); // (oficina es la nombre de la tabla, condición)
         base.close();
         if (cant == 1)
-            Toast.makeText(this, "Acaba de borrar todos los platos...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Acaba de borrar todos los Medicamentos...", Toast.LENGTH_SHORT).show();
         else
-            Toast.makeText(this, "No existen platos!\nAgrege Nuevamente Platos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No existen Medicamentos!\nAgrege Nuevamente Medicamentos", Toast.LENGTH_SHORT).show();
     }
 
     public void osdo(View view) {

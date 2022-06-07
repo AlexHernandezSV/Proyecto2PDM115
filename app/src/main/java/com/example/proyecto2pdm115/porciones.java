@@ -102,7 +102,7 @@ public class porciones extends AppCompatActivity implements View.OnClickListener
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 p=position;
-                new AlertDialog.Builder(porciones.this).setTitle("Confirmacion de Agregacion").setMessage("Deseas agregar ese plato?").setPositiveButton("Si",new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(porciones.this).setTitle("Confirmacion de Agregacion").setMessage("Deseas agregar ese Medicamento?").setPositiveButton("Si",new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                       //  Toast.makeText(porciones.this,"si",Toast.LENGTH_LONG).show();
