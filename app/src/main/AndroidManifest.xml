@@ -43,16 +43,16 @@
             android:name=".categorias"
             android:label="@string/title_activity_categorias" />
         <activity
-            android:name=".bebidas"
+            android:name=".Suplementos"
             android:label="@string/title_activity_bebidas" />
         <activity
-            android:name=".porciones"
+            android:name=".Analgesicos"
             android:label="@string/title_activity_porciones" />
         <activity
-            android:name=".parrillada"
+            android:name=".Varios"
             android:label="@string/title_activity_parrillada" />
         <activity
-            android:name=".Analgesicos"
+            android:name=".Antibioticos"
             android:label="@string/title_activity_mariscos" />
         <activity
             android:name=".ControlMenu"

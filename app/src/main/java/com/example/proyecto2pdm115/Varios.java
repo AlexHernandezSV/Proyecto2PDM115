@@ -1,6 +1,5 @@
 package com.example.proyecto2pdm115;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
@@ -20,7 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 
-public class bebidas extends AppCompatActivity implements View.OnClickListener {
+public class Varios extends AppCompatActivity implements View.OnClickListener {
 
     //============= Inicio voz =================
     ListView lv;
@@ -32,37 +31,41 @@ public class bebidas extends AppCompatActivity implements View.OnClickListener {
     String SlectedItem, SlectedPrecio;
     Integer p;
     String[] item_name={
-            "Ácido fólico",
-            "Calcio",
-            "SUKROL",
-            "Viagra",
-            "Vitamina C",
-            "Electrolit"
+            "Alcohol",
+            "Curas",
+            "Gazas",
+            "Mascarillas",
+            "Condones"
+
+
     };
+
     String[] item_desc={
-            "100 tabletas",
-            "300 tabletas ",
-            "100 tabletas ",
-            "4 tabletas",
-            "200 capsulas",
-            "Suero oral 1150ml"
+            "500 ml",
+            "20 unidades",
+            "50 unidades",
+            "50 unidades",
+            "3 unidades"
+
+
     };
+
     String[] item_precio={
-            "$25.00",
-            "$20.00",
-            "$22.00",
-            "$30.00",
-            "$15.00",
-            "$2.50"
+            "$9,99",
+            "$5,25",
+            "$11,99",
+            "10,00",
+            "3.50"
+
 
     };
     Integer[] img_id={
-            R.drawable.acidofolico,
-            R.drawable.calcio,
-            R.drawable.sukrol,
-            R.drawable.viagra,
-            R.drawable.vitamina,
-            R.drawable.suero
+            R.drawable.alcohol,
+            R.drawable.curas,
+            R.drawable.gazas,
+            R.drawable.mascarillas,
+            R.drawable.condones
+
     };
     Boolean[] eleccion={
             false,
@@ -74,11 +77,10 @@ public class bebidas extends AppCompatActivity implements View.OnClickListener {
             false
     };
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bebidas);
+        setContentView(R.layout.activity_varios);
 
         //============= Inicio voz =================
         Voice=(Button) findViewById(R.id.bvoice);
@@ -86,22 +88,26 @@ public class bebidas extends AppCompatActivity implements View.OnClickListener {
         Voice.setOnClickListener((View.OnClickListener) this);
         //============= Fin voz =================
 
-        list = (ListView) findViewById(R.id.listaBebida);
+
+        // EditText mas = (EditText)findViewById(R.id.mas);
+        list = (ListView) findViewById(R.id.parrilla);
         CustomListAdapter adaptador = new CustomListAdapter(this, item_name, item_desc, item_precio, img_id);
         list.setAdapter(adaptador);
+
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 p=position;
-                new AlertDialog.Builder(bebidas.this).setTitle("Confirmacion de Agregacion").setMessage("Deseas agregar ese Medicamento?").setPositiveButton("Si",new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(Varios.this).setTitle("Confirmacion de Agregacion").setMessage("Deseas agregar ese Medicamento?").setPositiveButton("Si",new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                //        Toast.makeText(parrillada.this,"si",Toast.LENGTH_LONG).show();
 
                         SlectedItem = item_name[p];
                         SlectedPrecio = item_precio[p];
 
-                        Intent i = new Intent(bebidas.this, Carrito.class);
+                        Intent i = new Intent(Varios.this, Carrito.class);
                         i.putExtra("itemn", item_name[p].toString());
                         i.putExtra("itemd", item_desc[p].toString());
                         i.putExtra("itemp", item_precio[p].toString());
@@ -116,10 +122,10 @@ public class bebidas extends AppCompatActivity implements View.OnClickListener {
                 //   item_precio.equals("S0");
             }
         });
-        findViewById(R.id.imageButton4).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.imageButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bebidas.this.startActivity(new Intent(bebidas.this, categorias.class));
+                Varios.this.startActivity(new Intent(Varios.this, categorias.class));
             }
         });
 
@@ -145,7 +151,7 @@ public class bebidas extends AppCompatActivity implements View.OnClickListener {
         if (RequestCode==check && ResultCode==RESULT_OK){
             ArrayList<String> results = intent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-            if(results.indexOf("ácido fólico") == 0 || results.indexOf("calcio" ) == 0 || results.indexOf("sukrol") == 0 || results.indexOf("viagra") == 0 || results.indexOf("vitamina c") == 0 || results.indexOf("electrolit") == 0)
+            if(results.indexOf("alcohol") == 0 || results.indexOf("curas" ) == 0 || results.indexOf("gasas") == 0 || results.indexOf("mascarillas") == 0 || results.indexOf("condones") == 0)
             {
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
@@ -190,4 +196,6 @@ public class bebidas extends AppCompatActivity implements View.OnClickListener {
 
 
     }
+
+
 }

@@ -1,6 +1,5 @@
 package com.example.proyecto2pdm115;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
@@ -20,7 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 
-public class porciones extends AppCompatActivity implements View.OnClickListener {
+public class Suplementos extends AppCompatActivity implements View.OnClickListener {
 
     //============= Inicio voz =================
     ListView lv;
@@ -28,50 +27,41 @@ public class porciones extends AppCompatActivity implements View.OnClickListener
     Button Voice;
     //============= Fin voz =================
 
-   ListView list;
-   String SlectedItem, SlectedPrecio;
-   Integer p;
-   principal pr;
+    ListView list;
+    String SlectedItem, SlectedPrecio;
+    Integer p;
     String[] item_name={
-            "Acetaminofen",
-            "Antigripal",
-            "Ibuprofeno",
-            "Paracetamol",
-            "Pepto Bismol",
-            "Tabcin",
-            "Naproxeno"
-
+            "Ácido fólico",
+            "Calcio",
+            "SUKROL",
+            "Viagra",
+            "Vitamina C",
+            "Electrolit"
     };
-
     String[] item_desc={
-            "2 blisters de 10 tabletas",
-            "1 blister de 10 tabletas",
-            "5 blisters de 10 tabletas",
-            "2 blisters de 8 tabletas",
-            "Frasco de 473 ml",
-            "60 tabletas efervescentes",
-            "10 tabletas"
+            "100 tabletas",
+            "300 tabletas ",
+            "100 tabletas ",
+            "4 tabletas",
+            "200 capsulas",
+            "Suero oral 1150ml"
     };
-
     String[] item_precio={
-            "$5,00",
-            "$4.75",
-            "$8,75",
-            "$5,25",
-            "$15,75",
-            "$10,50",
-            "$6,00"
+            "$25.00",
+            "$20.00",
+            "$22.00",
+            "$30.00",
+            "$15.00",
+            "$2.50"
 
     };
     Integer[] img_id={
-
-            R.drawable.acetaminofen,
-            R.drawable.antigripal,
-            R.drawable.ibuprofeno,
-            R.drawable.paracetamol,
-            R.drawable.peptobismol,
-            R.drawable.tabcin,
-            R.drawable.naproxeno,
+            R.drawable.acidofolico,
+            R.drawable.calcio,
+            R.drawable.sukrol,
+            R.drawable.viagra,
+            R.drawable.vitamina,
+            R.drawable.suero
     };
     Boolean[] eleccion={
             false,
@@ -83,10 +73,11 @@ public class porciones extends AppCompatActivity implements View.OnClickListener
             false
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_porciones);
+        setContentView(R.layout.activity_suplementos);
 
         //============= Inicio voz =================
         Voice=(Button) findViewById(R.id.bvoice);
@@ -94,7 +85,7 @@ public class porciones extends AppCompatActivity implements View.OnClickListener
         Voice.setOnClickListener((View.OnClickListener) this);
         //============= Fin voz =================
 
-        list = (ListView) findViewById(R.id.listaPorciones);
+        list = (ListView) findViewById(R.id.listaBebida);
         CustomListAdapter adaptador = new CustomListAdapter(this, item_name, item_desc, item_precio, img_id);
         list.setAdapter(adaptador);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -102,15 +93,14 @@ public class porciones extends AppCompatActivity implements View.OnClickListener
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 p=position;
-                new AlertDialog.Builder(porciones.this).setTitle("Confirmacion de Agregacion").setMessage("Deseas agregar ese Medicamento?").setPositiveButton("Si",new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(Suplementos.this).setTitle("Confirmacion de Agregacion").setMessage("Deseas agregar ese Medicamento?").setPositiveButton("Si",new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                      //  Toast.makeText(porciones.this,"si",Toast.LENGTH_LONG).show();
 
                         SlectedItem = item_name[p];
                         SlectedPrecio = item_precio[p];
 
-                        Intent i = new Intent(porciones.this, Carrito.class);
+                        Intent i = new Intent(Suplementos.this, Carrito.class);
                         i.putExtra("itemn", item_name[p].toString());
                         i.putExtra("itemd", item_desc[p].toString());
                         i.putExtra("itemp", item_precio[p].toString());
@@ -125,12 +115,13 @@ public class porciones extends AppCompatActivity implements View.OnClickListener
                 //   item_precio.equals("S0");
             }
         });
-        findViewById(R.id.imageButton2).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.imageButton4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                porciones.this.startActivity(new Intent(porciones.this, categorias.class));
+                Suplementos.this.startActivity(new Intent(Suplementos.this, categorias.class));
             }
         });
+
     }
 
     //============= Inicio voz =================
@@ -153,7 +144,7 @@ public class porciones extends AppCompatActivity implements View.OnClickListener
         if (RequestCode==check && ResultCode==RESULT_OK){
             ArrayList<String> results = intent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-            if(results.indexOf("acetaminofen") == 0 || results.indexOf("antigripal" ) == 0 || results.indexOf("ibuprofeno") == 0 || results.indexOf("paracetamol") == 0 || results.indexOf("pepto bismol") == 0 || results.indexOf("tabcin") == 0 || results.indexOf("naproxeno") == 0)
+            if(results.indexOf("ácido fólico") == 0 || results.indexOf("calcio" ) == 0 || results.indexOf("sukrol") == 0 || results.indexOf("viagra") == 0 || results.indexOf("vitamina c") == 0 || results.indexOf("electrolit") == 0)
             {
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
@@ -198,6 +189,4 @@ public class porciones extends AppCompatActivity implements View.OnClickListener
 
 
     }
-
-
 }

@@ -50,13 +50,13 @@ public class categorias extends Activity {
         findViewById(R.id.porciones).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                categorias.this.startActivity(new Intent(categorias.this, porciones.class));
+                categorias.this.startActivity(new Intent(categorias.this, Analgesicos.class));
             }
         });
         findViewById(R.id.baquita).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                categorias.this.startActivity(new Intent(categorias.this, parrillada.class));
+                categorias.this.startActivity(new Intent(categorias.this, Varios.class));
             }
         });
 
@@ -71,13 +71,13 @@ public class categorias extends Activity {
         findViewById(R.id.jugo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                categorias.this.startActivity(new Intent(categorias.this, bebidas.class));
+                categorias.this.startActivity(new Intent(categorias.this, Suplementos.class));
             }
         });
         findViewById(R.id.cangrejo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                categorias.this.startActivity(new Intent(categorias.this, Analgesicos.class));
+                categorias.this.startActivity(new Intent(categorias.this, Antibioticos.class));
             }
         });
     }
